@@ -40,7 +40,7 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct bus_s - variables -args, file, line elements
+ * struct MontyInterpreter - variables -args, file, line elements
  * @line: value
  * @file: pointer to monty file
  * @elements: line elements
@@ -53,4 +53,14 @@ typedef struct MontyInterpreter {
     char *elements;
     unsigned int line_number;
 } MontyInterpreter;
+
+extern MontyInterpreter interpreter;
+
+int execute_instruction(char *element, stack_t **stack, unsigned int line_counter, FILE *file);
+void free_stack(stack_t *head);
+void __push(stack_t **head, unsigned int line_number);
+void __pall(stack_t **head, unsigned int line_number);
+void addqueue(stack_t **head, int new);
+void addnode(stack_t **head, int new);
+
 #endif
