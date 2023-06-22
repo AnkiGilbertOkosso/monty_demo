@@ -51,7 +51,7 @@ typedef struct MontyInterpreter {
     char *line;
     FILE *file;
     char *elements;
-    unsigned int line_number;
+    int line_number;
 } MontyInterpreter;
 
 extern MontyInterpreter interpreter;

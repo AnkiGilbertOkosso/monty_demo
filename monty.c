@@ -1,8 +1,8 @@
-#include "monty.h"
 #include <stdio.h>
+#include <stdlib.h>
 
+#include "monty.h"
 
-MontyInterpreter interpreter = {NULL, NULL, NULL, 0};
 /**
 * main - monty code interpreter
 * @argc: number of the arguments
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     {
         line = NULL;
         chars_read = getline(&line, &line_size, file);
-        interpreter.line = line;
+        interpreter.elements = line;
         line_number++;
 
         if (chars_read > 0)
