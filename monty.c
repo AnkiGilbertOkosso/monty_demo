@@ -11,7 +11,7 @@ MontyInterpreter interpreter = {NULL, NULL, NULL, 0};
 */
 int main(int argc, char *argv[])
 {
-    char *line = NULL;
+    char *line;
     FILE *file;
     size_t line_size = 0;
     ssize_t chars_read = 1;
