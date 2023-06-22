@@ -62,5 +62,22 @@ void __push(stack_t **head, unsigned int line_number);
 void __pall(stack_t **head, unsigned int line_number);
 void addqueue(stack_t **head, int new);
 void addnode(stack_t **head, int new);
+void __pint(stack_t **head, unsigned int line_number);
+void __pop(stack_t **head, unsigned int line_number);
+void __swap(stack_t **head, unsigned int line_number);
+void __add(stack_t **head, unsigned int line_number);
+void __nop(stack_t **head, unsigned int line_number);
+void __sub(stack_t **head, unsigned int line_number);
+void __div(stack_t **head, unsigned int line_number);
+void __mul(stack_t **head, unsigned int line_number);
+void __mod(stack_t **head, unsigned int line_number);
+void __pchar(stack_t **head, unsigned int line_number);
+void __pstr(stack_t **head, unsigned int line_number);
+void __rotl(stack_t **head, unsigned int line_number);
+void __rotr(stack_t **head, unsigned int line_number);
+void __stack(stack_t **head, unsigned int line_number);
+void __queue(stack_t **head, unsigned int line_number);
+
+
 
 #endif

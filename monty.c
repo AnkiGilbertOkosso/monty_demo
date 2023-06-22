@@ -1,4 +1,6 @@
 #include "monty.h"
+#include <stdio.h>
+
 
 MontyInterpreter interpreter = {NULL, NULL, NULL, 0};
 /**

@@ -12,6 +12,21 @@ int execute_instruction(char *element, stack_t **stack, unsigned int line_counte
 	instruction_t ints[] = {
 				{"push", __push},
                 {"pall", __pall},
+				{"pint", __pint},
+				{"pop", __pop},
+				{"swap", __swap},
+				{"add", __add},
+				{"nop", __nop},
+				{"sub", __sub},
+				{"div", __div},
+				{"mul", __mul},
+				{"mod", __mod},
+				{"pchar", __pchar},
+				{"pstr", __pstr},
+				{"rotl", __rotl},
+				{"rotr", __rotr},
+				{"stack", __stack},
+				{"queue", __queue},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
