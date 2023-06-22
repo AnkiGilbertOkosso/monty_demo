@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "monty.h"
+
+MontyInterpreter interpreter = {NULL, NULL, NULL, 0};
 
 /**
 * main - monty code interpreter
@@ -42,7 +41,7 @@ int main(int argc, char *argv[])
 
         if (chars_read > 0)
         {
-            execute_instruction(line, &stack, line_number, file);
+            exec(line, &stack, line_number, file);
         }
 
         free(line);

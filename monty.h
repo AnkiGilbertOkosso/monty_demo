@@ -1,5 +1,5 @@
-#ifndef MONTY_H_
-#define MONTY_H_
+#ifndef MONTY_H
+#define MONTY_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -56,12 +56,12 @@ typedef struct MontyInterpreter {
 
 extern MontyInterpreter interpreter;
 
-int execute_instruction(char *element, stack_t **stack, unsigned int line_counter, FILE *file);
+int exec(char *element, stack_t **stack, unsigned int line_counter, FILE *file);
 void free_stack(stack_t *head);
 void __push(stack_t **head, unsigned int line_number);
 void __pall(stack_t **head, unsigned int line_number);
-void addqueue(stack_t **head, int new);
-void addnode(stack_t **head, int new);
+void addqueue(stack_t **head, int new_node);
+void addnode(stack_t **head, int new_node);
 void __pint(stack_t **head, unsigned int line_number);
 void __pop(stack_t **head, unsigned int line_number);
 void __swap(stack_t **head, unsigned int line_number);

@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
-* execute_instruction - executes the opcode
+* exec - executes the opcode
 * @stack: head linked list - stack
-* @line_counter: line_counter
+* @line_count: line_counter
 * @file: poiner to monty file
 * @element: line element
 * Return: no return
 */
-int execute_instruction(char *element, stack_t **stack, unsigned int line_counter, FILE *file)
+int exec(char *element, stack_t **stack, unsigned int line_count, FILE *file)
 {
 	instruction_t ints[] = {
 				{"push", __push},
@@ -39,13 +39,13 @@ int execute_instruction(char *element, stack_t **stack, unsigned int line_counte
 	while (ints[i].opcode && op)
 	{
 		if (strcmp(op, ints[i].opcode) == 0)
-		{	ints[i].f(stack, line_counter);
+		{	ints[i].f(stack, line_count);
 			return (0);
 		}
 		i++;
 	}
 	if (op && ints[i].opcode == NULL)
-	{ fprintf(stderr, "L%d: unknown instruction %s\n", line_counter, op);
+	{ fprintf(stderr, "L%d: unknown instruction %s\n", line_count, op);
 		fclose(file);
 		free(element);
 		free_stack(*stack);

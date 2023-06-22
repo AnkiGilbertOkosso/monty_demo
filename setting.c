@@ -3,10 +3,10 @@
 /**
  * addnode - add node to head stack
  * @head: head of a stack
- * @new: new_value
+ * @new_node: new_value
  * Return: no return
 */
-void addnode(stack_t **head, int new)
+void addnode(stack_t **head, int new_node)
 {
 
 	stack_t *start, *stack;
@@ -20,7 +20,7 @@ void addnode(stack_t **head, int new)
     }
 	if (stack)
 		stack->prev = start;
-	start->n = new;
+	start->n = new_node;
 	start->next = *head;
 	start->prev = NULL;
 	*head = start;
@@ -29,11 +29,11 @@ void addnode(stack_t **head, int new)
 
 /**
  * addqueue - add node to tail stack
- * @new: new_value
+ * @new_node: new_value
  * @head: head of stack
  * Return: no return
 */
-void addqueue(stack_t **head, int new)
+void addqueue(stack_t **head, int new_node)
 {
 	stack_t *start, *stack;
 
@@ -43,7 +43,7 @@ void addqueue(stack_t **head, int new)
 	{
 		printf("Error\n");
 	}
-	start->n = new;
+	start->n = new_node;
 	start->next = NULL;
 	if (stack)
 	{
